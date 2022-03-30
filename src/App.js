@@ -2,16 +2,15 @@
 //import './App.css';
 //import Index from './pages/home/Index';
 // import Data from './components/Data';
-import Index from './components/Index';
+// import Index from './components/Index';
+import Spotify from './components/Spotify';
 import './Datas.css';
 
 function Datas() {
   return (
-  <header>
     <div>
-      <Index/>
+      <Spotify/>
     </div>
-  </header>
   );
 }
 

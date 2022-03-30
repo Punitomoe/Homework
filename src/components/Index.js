@@ -6,6 +6,7 @@ function Index() {
     return (
         <center>
         <div className="">
+            <input type="text" placeholder='Search...'/>
             {data.map((data, index) => {
                 return (
                     <div key={index} className='databorder'>
