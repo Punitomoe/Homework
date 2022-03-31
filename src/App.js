@@ -8,7 +8,7 @@ import './Datas.css';
 
 function Datas() {
   return (
-    <div>
+    <div className='background'>
       <Spotify/>
     </div>
   );

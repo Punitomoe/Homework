@@ -1,18 +1,30 @@
+.background {
+    background: #4424D6;
+}
+
+
 .databorder {
-    border: 2px solid black;
+    border: 3px solid #29157E;
     border-radius: 4px;
-    background-color: white;
-    width: 36%;
+    width: 45%;
     height: 150px;
-    margin-top: 250px;
+    margin-top: 50px;
     float: center;
+    background: #E5E0FA;
 }
 
 .datatext {
     text-align: center;
-    float: left;
-    display: solid black;
+    float: center;
+    display: solid;
+    color: #C8BEF4;
 
+}
+.datatext2 {
+    text-align: center;
+    float: center;
+    display: solid;
+    color: #110934;
 }
 
 .datalogo {
@@ -27,11 +39,24 @@ button {
     opacity: 0.8;
     border-radius: 2px;
     display: inline-block;
-    background-color: #ff1900;
+    background-color: #4424D6;
     color: white;
     display: solid;
     margin-top: 20px;
-    margin-right: 20px;
+    margin-right: auto;
+    width: 200px;
+    height: 30px;
+  }
+
+  .btn {
+    opacity: 0.8;
+    border-radius: 2px;
+    display: inline-block;
+    background-color: #4424D6;
+    color: white;
+    display: solid;
+    margin-top: 20px;
+    margin-left: 20px;
     width: 200px;
     height: 30px;
   }

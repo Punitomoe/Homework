@@ -2,6 +2,7 @@ import React from "react";
 import SpotifyGetPlaylist from './SpotifyGetPlaylist/SpotifyGetPlaylist';
 import Index from './Index';
 
+const BASE_URL = "https://api.spotify.com/v1";
 const CLIENT_ID = "63ff8c4fd4b34615887c6c18097c625f";
 const SPOTIFY_AUTHORIZE_ENDPOINT = "https://accounts.spotify.com/authorize";
 const REDIRECT_URI = "http://localhost:3000/"
@@ -43,9 +44,8 @@ const Spotify = () => {
     return (
         <center>
         <div>
-            <h1>Spotify</h1>
+            <h1 className="datatext">Spotify</h1>
             <button onClick={handleLogin}>Login to Spotify</button>
-            <SpotifyGetPlaylist/>
             <Index/>
         </div>
         </center>

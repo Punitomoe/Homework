@@ -1,34 +1,14 @@
-import React, {useEffect, useState} from "react";
-import axios from "axios";
-
-const PLAYLIST_ENDPOINT = "https://api.spotify.com/v1/search";
-
-const SpotifyGetPlaylist = () => {
-    const [token, setToken] = useState("");
-    const [data, setData] = useState({});
-
-useEffect(() => {
-    if (localStorage.getItem("accessToken")){
-        setToken(localStorage.getItem("accessToken"));
-    }
-}, []);
-
-const handleGetPlaylist = () => {
-    axios.get(PLAYLIST_ENDPOINT, {
-        headers: {
-            Authorization: "Bearer" + token,
-        },
-    })
-    .then((response) => {
-        setData(response.data);
-    })
-    .catch((error) => {
-        console.log(error);
-    })
+function SpotifyGetPlaylist(props) {
+  return (
+    <div className="databorder">
+      <img src={props.url} className="datalogo" alt={props.alt}></img>
+      <div className="datatext2">
+        <p className="album">{props.albumName}</p>
+        <p>{props.artistName}</p>
+        <button type="button">Tambah Playlist</button>
+      </div>
+    </div>
+  );
 }
-
-    return <button onClick={handleGetPlaylist}>Search</button>;
-    
-};
 
 export default SpotifyGetPlaylist;
