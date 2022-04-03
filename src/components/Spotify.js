@@ -1,6 +1,6 @@
 import React from "react";
-import SpotifyGetPlaylist from './SpotifyGetPlaylist/SpotifyGetPlaylist';
 import Index from './Index';
+import PlaylistSaved from "./GetPlaylist/PlaylistSaved";
 
 const BASE_URL = "https://api.spotify.com/v1";
 const CLIENT_ID = "63ff8c4fd4b34615887c6c18097c625f";
@@ -47,6 +47,7 @@ const Spotify = () => {
             <h1 className="datatext">Spotify</h1>
             <button onClick={handleLogin}>Login to Spotify</button>
             <Index/>
+            <PlaylistSaved/>
         </div>
         </center>
     );

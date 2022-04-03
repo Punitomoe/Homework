@@ -1,10 +1,9 @@
-// import Data from './Data'
-// import Data from '../App';
-import React, { useEffect } from "react";
+import React from "react";
 import axios from "axios";
-import SpotifyGetPlaylist from "./SpotifyGetPlaylist/SpotifyGetPlaylist";
+import SpotifyGetPlaylist from "./GetPlaylist/SpotifyGetPlaylist";
+import PlaylistSaved from "./GetPlaylist/PlaylistSaved";
 
-const BASE_URL = "https://api.spotify.com/v1";
+// const BASE_URL = "https://api.spotify.com/v1";
 const CLIENT_ID = "63ff8c4fd4b34615887c6c18097c625f";
 const REDIRECT_URI = "http://localhost:3000/";
 const SCOPE = ["playlist-modify-private"]
@@ -84,6 +83,7 @@ class Index extends React.Component {
     window.location.replace = "http://localhost:3000/";
   }
 
+
   render() {
     let element;
     if (this.state.isLoggedIn === true && this.state.savedToken != null) {
@@ -98,7 +98,7 @@ class Index extends React.Component {
               url={item.album.images[0].url}
               albumName={item.album.name}
               artistName={item.artists[0].name}
-              alt="Image not loaded"
+              alt=""
               key={index}
             />
           ))}
@@ -106,7 +106,7 @@ class Index extends React.Component {
       );
     } else
     document.onkeydown = function () {
-      if (window.event.keyCode == "13") {
+      if (window.event.keyCode === "13") {
         this.onSearch();
       }
     };
