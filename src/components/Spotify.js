@@ -47,7 +47,6 @@ const Spotify = () => {
             <h1 className="datatext">Spotify</h1>
             <button onClick={handleLogin}>Login to Spotify</button>
             <Index/>
-            <PlaylistSaved/>
         </div>
         </center>
     );

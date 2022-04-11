@@ -1,17 +1,16 @@
-//import logo from './logo.svg';
-//import './App.css';
-//import Index from './pages/home/Index';
-// import Data from './components/Data';
-// import Index from './components/Index';
-import Spotify from './components/Spotify';
 import './Datas.css';
+import { Provider } from "react-redux";
+import Store from './redux/Store';
+import SpotifyRoutes from "./routes/SpotifyRoutes";
 
-function Datas() {
+function App() {
   return (
-    <div className='background'>
-      <Spotify/>
-    </div>
+      <Provider store={Store}>
+        <div className="">
+          <SpotifyRoutes/>
+        </div>
+      </Provider>
   );
 }
 
-export default Datas;
+export default App;
