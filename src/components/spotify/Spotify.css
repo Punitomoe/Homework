@@ -1,0 +1,11 @@
+.text {
+    text-align: center;
+    float: center;
+    display: solid;
+    color: #C8BEF4;
+}
+
+.buttonLogin {
+    margin-bottom: 10px;
+    align-items: center;
+}

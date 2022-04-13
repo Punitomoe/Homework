@@ -2,18 +2,13 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import SpotifyGetPlaylist from "./GetPlaylist/SpotifyGetPlaylist";
-import PlaylistSaved from "./GetPlaylist/PlaylistSaved";
-import useSearch from "../hooks/useSearch";
-import SearchForm from "./GetPlaylist/SearchForm";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-} from "react-router-dom";
-import { saveToken } from '../redux/TokenAction';
+import SpotifyGetPlaylist from "../GetPlaylist/SpotifyGetPlaylist";
+import PlaylistSaved from "../PlaylistSearch/PlaylistSaved";
+import useSearch from "../../hooks/useSearch";
+import SearchForm from "../Search/SearchForm";
+import { saveToken } from '../../redux/TokenAction';
+import Button from '@mui/material/Button';
+import './Index.css';
 
 const SPOTIFY_AUTHORIZE_ENDPOINT = "https://accounts.spotify.com/authorize";
 const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
@@ -169,34 +164,29 @@ function Index() {
   };
 
   return (
-    <div className="container">
-      <div className="link-toSpotify">
-        <button onClick={isLoggedOut}>Logout</button>
+    <div className="">
+      <div className="buttonLogout">
+        <Button variant="outlined" color="error" onClick={isLoggedOut}>Logout</Button>
       </div>
-      <div className="formAndView">
-        <div className="create-playlist">
+      <div className="">
+        <div className="">
           <PlaylistSaved
             onCreate={handlePlaylist}
             handleChangeTitle={handleForm}
             handleChangeDesc={handleForm}
           />
         </div>
-        {/* <div className="viewPlaylist">
-          <button type="submit" onClick={handleView}>
-            View Playlist
-          </button>
-        </div> */}
       </div>
-      <div className="twoSided">
-        <div className="spotify-track">
+      <div className="">
+        <div className="">
           <SearchForm onSearch={onSearch} handleChange={handleChange} />
-          <div className="listOf-track">
+          <div className="">
             {searchResult.map((item, index) => (
               <SpotifyGetPlaylist
                 url={item.album.images[0].url}
                 albumName={item.album.name}
                 artistName={item.artists[0].name}
-                alt="Image not loaded"
+                alt=""
                 key={item.uri}
                 isSelected={isSelected.includes(item.uri)}
                 onClick={(isSelected) =>

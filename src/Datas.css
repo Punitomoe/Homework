@@ -1,16 +1,25 @@
-.background {
+background {
     background: #4424D6;
 }
 
+.footer {
+    margin: 10px 50px 10px 50px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-content: center;
+    float:left;
+    width: 40%;
+    height: 150px;
+}
 
 .databorder {
     border: 3px solid #29157E;
     border-radius: 4px;
-    width: 45%;
-    height: 150px;
-    margin-top: 50px;
-    float: center;
+    width: 100%;
+    margin-top: 30px;
     background: #E5E0FA;
+    
 }
 .databorderPlaylist {
     border: 3px solid #29157E;
@@ -48,17 +57,21 @@
     width: 130px;
     height: 130px;
     float: left;
-
+    margin-left: -40px;
+    display: flex;
+    flex-direction: column;
+    /* padding: 1rem; */
+    justify-content: space-between;
 }
 
 button {
     opacity: 0.8;
     border-radius: 2px;
     display: inline-block;
-    background-color: #4424D6;
-    color: white;
+    /* background-color: #4424D6; */
+    /* color: white; */
     display: solid;
-    margin-top: 20px;
+    margin-bottom: 10px;
     margin-right: auto;
     width: 200px;
     height: 30px;

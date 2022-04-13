@@ -1,6 +1,6 @@
-import {BrowserRouter as Router,Switch,Route,Link,Redirect,} from "react-router-dom";
-import Index from "../components/Index";
-import Spotify from "../components/Spotify";
+import {BrowserRouter as Router,Switch,Route,Redirect} from "react-router-dom";
+import Index from "../components/index/Index";
+import Spotify from "../components/spotify/Spotify";
   
 function SpotifyRoutes() {
 const isLoggedIn = localStorage.getItem("isLoggedIn");

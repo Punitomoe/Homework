@@ -1,3 +1,6 @@
+import './PlaylistSearch.css';
+import Button from '@mui/material/Button';
+
 const PlaylistSaved = ({
     onCreate,
     handleChange,
@@ -17,7 +20,9 @@ const PlaylistSaved = ({
                 <textarea type="text" id="description" name="description" onChange={handleChangeDesc} required></textarea>
                 </div>
             </form>
-            <button>Save</button>  
+            <div className="buttonSave">
+            <Button variant="contained">Save</Button>
+            </div>
         </div>
       </>
   )

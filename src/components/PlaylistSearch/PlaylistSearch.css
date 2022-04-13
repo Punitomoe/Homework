@@ -1,0 +1,10 @@
+.databorderPlaylist {
+    border: 3px solid #29157E;
+    border-radius: 4px;
+    width: 40%;
+    height: 300px;
+    background: #E5E0FA;
+}
+.buttonSave {
+    margin-top: 10px;
+}

@@ -1,6 +1,9 @@
 import React from "react";
-import Index from './Index';
-import PlaylistSaved from "./GetPlaylist/PlaylistSaved";
+import Index from "../index/Index";
+// import SearchForm from "./GetPlaylist/SearchForm";
+// import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import './Spotify.css';
 
 const BASE_URL = "https://api.spotify.com/v1";
 const CLIENT_ID = "63ff8c4fd4b34615887c6c18097c625f";
@@ -44,8 +47,8 @@ const Spotify = () => {
     return (
         <center>
         <div>
-            <h1 className="datatext">Spotify</h1>
-            <button onClick={handleLogin}>Login to Spotify</button>
+            <h1 className="text">Spotify</h1>
+            <Button className="buttonLogin" variant="contained" color="success" onClick={handleLogin}>Login to Spotify</Button>
             <Index/>
         </div>
         </center>
