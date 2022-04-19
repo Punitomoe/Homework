@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import SpotifyGetPlaylist from "../GetPlaylist/SpotifyGetPlaylist";
+import SpotifyGetPlaylist from "../GetPlaylist/SpotifyGetPlaylist.js";
 import PlaylistSaved from "../PlaylistSearch/PlaylistSaved";
 import useSearch from "../../hooks/useSearch";
 import SearchForm from "../Search/SearchForm";

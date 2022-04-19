@@ -15,28 +15,34 @@ function SpotifyGetPlaylist(props) {
   return (
     <div className="footer">
       <div>
-    <Card sx={{ maxWidth: 500 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image={props.url}
-        alt={props.alt}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {props.artistName}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {props.albumName}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <div className="buttonSelect">
-        <Button variant="contained" component="span" type="button" className={`${isSelected ? "btn-primary" : "btn-secondary"}`} onClick={handleToggleSelect}>{isSelected ? "Deselect" : "Select"}</Button>
-        </div>
-      </CardActions>
-    </Card>
-    </div>
+        <Card sx={{ maxWidth: 500 }}>
+          <CardMedia
+            component="img"
+            height="140"
+            image={props.url}
+            alt={props.alt}
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {props.artistName}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {props.albumName}
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <div className="buttonSelect">
+              <Button 
+              variant="contained" 
+              component="span" 
+              type="button" 
+              className={`${isSelected ? "btn-primary" : "btn-secondary"}`} 
+              onClick={handleToggleSelect}>{isSelected ? "Deselect" : "Select"}
+              </Button>
+            </div>
+          </CardActions>
+        </Card>
+      </div>
     {/* <div className="footer">
     <ul className="databorder">
       <img src={props.url} className="datalogo" alt={props.alt}></img>

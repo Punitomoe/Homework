@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 import './Search.css';
 
-const SearchForm = ({ onSearch, handleChange, handlePlaylist }) => {
+const SearchForm = ({ onSearch, handleChange }) => {
   return (
     <div>
       <div className='distanceSearch'></div>
